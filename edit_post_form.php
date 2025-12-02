@@ -18,3 +18,26 @@ if($result->num_rows == 0){
 }
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Form</title>
+</head>
+<body>
+    <form action="edit_post_validate.php" method="post">
+        <input type="hidden" name="id" value="<?php echo $id;?>">
+        <label for="title">Title: </label><br>
+        <input type="text" name="title" id="title" value="<?php echo $title;?>" size="34">
+        <br>
+        <label for="description_txt">Description: </label><br>
+        <textarea name="description" id="description_txt" cols="60" rows="5"><?php echo $post_txt; ?></textarea><br>
+        <label for="post_txt">Content: </label><br>
+        <textarea name="post_txt" id="post_txt" cols="60" rows="10"><?php echo $post_txt; ?></textarea>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
