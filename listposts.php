@@ -1,25 +1,36 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="Google.com">Google</a>
+    </nav>
+    <?php
 
-include 'includes/conndb.php';
-session_start();
-$_SESSION['user_id'] = 1;
-$_SESSION['username'] = 'admin';
-$_SESSION['logged_in'] = true;
-$_SESSION['role'] = 'admin';
+    include 'includes/conndb.php';
+    session_start();
+    $_SESSION['user_id'] = 1;
+    $_SESSION['username'] = 'admin';
+    $_SESSION['logged_in'] = true;
+    $_SESSION['role'] = 'admin';
 
-$logged_in = $_SESSION['logged_in'];
-$role = $_SESSION['role'];
+    $logged_in = $_SESSION['logged_in'];
+    $role = $_SESSION['role'];
 
-$SQL = "SELECT id, title, author FROM post";
+    $SQL = "SELECT id, title, author FROM post";
 
-$result = $conn->query(query:$SQL);
+    $result = $conn->query(query:$SQL);
 
-echo '<style>
-section{
-background-color:lightlue;
-display:block;
-}
-</style>';
+    echo '<style>
+    section{
+    background-color:lightlue;
+    display:block;
+    }
+    </style>';
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
@@ -34,3 +45,8 @@ if ($result->num_rows > 0) {
 } else {
     echo "Sorry 0 results returned";
 }
+
+?>
+
+</body>
+</html>
