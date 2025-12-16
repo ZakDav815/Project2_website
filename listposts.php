@@ -37,7 +37,7 @@ if ($result->num_rows > 0) {
         echo '<section class="***">';
         echo '<p><a href="retrieve_post.php?id=' . $row['id'] . '">' . $row['title'] . '</a>:<br>'; // replaced blogpost_retrieve_test.php with retrieve_post.php
         if($role == 'admin'){
-            echo '<a href="edit_post_form.php?id=' . $row['id'] . '"><Edit</a> | <a href="delete_post.php?id=' . $row['id'] . '">Delete</a>';
+            echo '<a href="edit_post_form.php?id=' . $row['id'] . '">Edit</a> | <a href="delete_post.php?id=' . $row['id'] . '">Delete</a>';
         }
         echo $row['author'] . "</>";
         echo "</section>";

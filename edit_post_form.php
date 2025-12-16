@@ -1,9 +1,9 @@
 <?php
 
-include 'conndb.php';
+include 'Includes/conndb.php';
 $id = $_GET['id'];
 
-$SQL = "SELECT title, description, post_txt FROM posts WHERE id =$id";
+$SQL = "SELECT title, description, post_txt FROM post WHERE id =$id";
 
 $result = $conn->query(query: $SQL);
 
@@ -14,7 +14,7 @@ if($result->num_rows == 0){
 }else{
     $title= $row['title'];
     $description = $row['description'];
-    $post_txt = htmlentities(string: $row['post.txt']);
+    $post_txt = htmlentities(string: $row['post_txt']);
 }
 
 ?>

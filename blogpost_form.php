@@ -8,7 +8,7 @@
 <body>
     <form action="blogpost_form.php" method="post">
     <label for="title">Title: </label><br>
-    <input type 
+    <input type> 
     </form>
 </body>
 </head>
