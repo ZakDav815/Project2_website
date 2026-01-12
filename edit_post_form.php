@@ -1,13 +1,13 @@
 <?php
 
 include 'Includes/conndb.php';
-$id = $_GET['id'];
+$id = $_GET['id']; // Undefined Array Key
 
 $SQL = "SELECT title, description, post_txt FROM post WHERE id =$id";
 
 $result = $conn->query(query: $SQL);
 
-$row = $result->fetch_assoc();
+$row = $result->fetch_assoc(); //  Uncaught Error: Call to a member function fetch_assoc() on bool in C:\xampp\htdocs\Project2_website\edit_post_form.php:10 Stack trace: #0 {main}
 
 if($result->num_rows == 0){
     echo "No Post Found!";
