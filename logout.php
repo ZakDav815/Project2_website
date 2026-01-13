@@ -5,7 +5,6 @@ if(isset($_SESSION['validated']) && $_SESSION['validated'] === true){
     echo '<h1>You Are Now Logged Out!</h1>';
 }else{
     echo '<h1>You Are Already Logged Out!</h1>';
-    //header('passwordHash.php');
+    //header('testHash.php');
 }
-//continue from 21:34
 ?>

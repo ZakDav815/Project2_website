@@ -6,5 +6,6 @@ if(isset($_SESSION['validated']) && $_SESSION['validated'] === true){
 }else{
      echo '<h1>Not Authorised!</h1>';
     header('passwordHash.php');
+    //header('testHash.php');
 }
 ?>
