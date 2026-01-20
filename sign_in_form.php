@@ -7,7 +7,7 @@
 </head>
 <body>
     <p>sign in</p>
-    <form action="sign-in-validate.php" method="post">
+    <form action="sign_in_validate.php" method="post">
         <input type="text" name="?Username"
         placeholder="Enter valid username">
         <style>
