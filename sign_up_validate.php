@@ -12,13 +12,15 @@ $uname = $_POST["username"];
 $pword_txt = $_POST["password"];
 $pword_check_txt = $_POST["password_check"];
 
+echo "" . $name . "" . $username . "" . $password_txt . "" . $pword_check_txt;
+
 //echo("".$name."".$uname."".$pword."".$pword_check_txt);
 
 //validate lengths
 
 // check password against second value
 
-if($pword_txt != $pword_check_txt) {
+if($pword_txt != $pword_check_txt) {                      // echo something around here below
     $errors["login"] = "Username or Password Incorrect";
     $_SESSION["errors"] = $errors;
     header("Location:sign_up_form.php");

@@ -6,8 +6,12 @@
     <title>Sign in</title>
 </head>
 <body>
+<<<<<<< HEAD
+    <p1><b>sign in</b></p1>
+=======
     <p>sign in</p>
-    <form action="sign-in-validate.php" method="post">
+>>>>>>> d0db483725f0b954ad0d28a06fd629e38cccaf89
+    <form action="sign_in_validate.php" method="post">
         <input type="text" name="?Username"
         placeholder="Enter valid username">
         <style>
