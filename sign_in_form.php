@@ -10,6 +10,9 @@
     <p1><b>sign in</b></p1>
 =======
     <p>sign in</p>
+<<<<<<< HEAD
+>>>>>>> d0db483725f0b954ad0d28a06fd629e38cccaf89
+=======
 >>>>>>> d0db483725f0b954ad0d28a06fd629e38cccaf89
     <form action="sign_in_validate.php" method="post">
         <input type="text" name="?Username"
