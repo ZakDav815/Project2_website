@@ -6,7 +6,7 @@ include 'includes/conndb.php';
 //initialise errors
 $errors = array();
 
-//
+//set parameters
 $name = $_POST["name"];
 $uname = $_POST["username"];
 $pword_txt = $_POST["password"];
@@ -30,8 +30,6 @@ if($pword_txt != $pword_check_txt) {                      // echo something arou
 $hashed = password_hash(($pword_txt), PASSWORD_DEFAULT);
 //send to db
 
-//______________________________________________________________________________
-
 //prepare data
 $statement = $conn->prepare("INSERT INTO users (name, uname) VALUES (?,?)");
 $statement->bind_param("ss",$name,$uname);
@@ -46,7 +44,7 @@ $_SESSION["errors"] = $errors;
 header("Location:sign_up_form.php");
 exit();
 };
-//______________________________________________________________________________
+
 $statement->close();
 
 //prepare next statement
@@ -55,9 +53,11 @@ $statement = $conn->prepare("INSERT INTO passwords (user_id, password_hash) VALU
 if($statement->execute()){
     echo "Password Hash Added to DB Successfully.";
     unset($_SESSION["errors"]);
-    //header("");
-    //exit();
+    //redirdect to a paeg that you send them to ex. index of a site or confirmation page;
+    header("Location:sign_in_form.php");
+    exit();
 }else{
-    echo "Error Occurred With Insert";
-    //header("";)
+    echo "Error Occurred With INSERT";
+   //header("";)
 }
+$statement->close();

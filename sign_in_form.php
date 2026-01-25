@@ -6,27 +6,29 @@
     <title>Sign in</title>
 </head>
 <body>
-<<<<<<< HEAD
-    <p1><b>sign in</b></p1>
-=======
-    <p>sign in</p>
-<<<<<<< HEAD
->>>>>>> d0db483725f0b954ad0d28a06fd629e38cccaf89
-=======
->>>>>>> d0db483725f0b954ad0d28a06fd629e38cccaf89
+    <p1><b>You have been Signed Out.</b></p1>
+    <p>Sign in to enter.</p>
     <form action="sign_in_validate.php" method="post">
-        <input type="text" name="?Username"
-        placeholder="Enter valid username">
+        <input type="text" name="username"
+        placeholder="Enter Username">
+        
+        <input type="password" name="password_text" placeholder="Password">
+        <input type="password" name="password_check_field" placeholder="Re-enter Password">
+        <input type="submit">
         <style>
+            form {
+            background-color: azure;
+            border: 10px solid transparent;
+            padding: 35px;
+            border-image: url(images/border.png) 30 round;
+            }
             body {
-            background-color: lightgray;
+            background-image: url(images/grey-white-gradient.jpg);
             }
             form {
                 margin: 20px;
             }
         </style>
-        <input type="password" name="password_text">
-        <input type="submit">
     </form>
 </body>
 </html>

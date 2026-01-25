@@ -1,10 +1,12 @@
 <?php
-    session_start();
+    // starting session must be first thing done if using one
+    ession_start();
+
     if (isset($_SESSION["errors"])){
     $errors = $_SESSION["errors"];
     foreach ($errors as $error) {
         echo $error;
-    }
+        }
     }
 ?>
 <!DOCTYPE html>
@@ -23,8 +25,8 @@
             padding: 35px;
             border-image: url(images/border.png) 30 round;
         }
-        /* create box half*/
-        form input{
+        /*Setting width of inputs text inputs only*/
+        form input[type="text"]{
             width: 20%;
         }
     </style>
@@ -44,6 +46,7 @@
         <p>Re-enter Password:<br>
         <input type="password" name="password_check_field" placeholder="Re-enter Password">Re-enter your password. Make sure to spell the password correctly.
         </p>
+        <!-- Submit button -->
         <input type="submit">
     </form>
 </body>

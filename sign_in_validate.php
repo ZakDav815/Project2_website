@@ -25,8 +25,31 @@ $statement->fetch();
 
 $statement->close();
 
-if(isset($user_id))
+if(isset($user_id) && !empty($user_id)) // changed from if(isset($user_id) && !empty($user_id))
 {
     echo($user_id);
+    //check password in password table using password_verify()
+
+    $statement = $conn->prepare("SELECT password_hash FROM passwords WHERE user_id = ?"); //not sure of password_hash/passwords/user_id works as phpMyAdmin not working(25/01/26 20:34)
+    $statement->bind_param("s", $username);
+    $statement->execute();
+
+    //statement->store_result();
+    $statement->bind_result($pword_hash); // not sure if work(25/01/26 20:36)
+
+    $statement->fetch();
+
+    $statement->close();
+}else{
+    // handle if user id not returned
 }
-//check password in password table using password_verify()
+
+if(isset($pword_hash) && !empty($pword_hash)){ //changed instances of password to "pword". issues maybe but won't be able to check
+    $hashed_input = password_hash($pass_text);
+    $success = password_verify($pass_text, $pword_hash);
+}
+
+if($success){
+    // where handle set logged_in to true
+    
+}
