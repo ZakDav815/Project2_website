@@ -1,6 +1,6 @@
 <?php
     // starting session must be first thing done if using one
-    ession_start();
+    session_start();
 
     if (isset($_SESSION["errors"])){
     $errors = $_SESSION["errors"];
@@ -33,7 +33,7 @@
 </head>
 <body>
     <form action="sign_up_validate.php" method="post">
-        <p>To make, respond and like posts, you will need to sign up. After, you will have more freedoms to make and interact with posts. <b>This is not finished.</b></p>
+        <p>To make, respond and like posts, you will need to sign up. After, you will be able to to make and interact with posts. <b>This is not finished. Design & whatnot may change over time.</b></p>
         <p>Name:<br>
         <input type="text" name="name" id="name_field" placeholder="Name">Your name.
         </p>

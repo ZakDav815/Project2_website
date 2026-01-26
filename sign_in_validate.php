@@ -49,7 +49,6 @@ if(isset($pword_hash) && !empty($pword_hash)){ //changed instances of password t
     $success = password_verify($pass_text, $pword_hash);
 }
 
-if($success){
+// if($success){                            deleted these 3 lines and fixed an error I had.
     // where handle set logged_in to true
-    
-}
+// }
