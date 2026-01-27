@@ -44,7 +44,7 @@
         <input type="password" name="password" placeholder="Password">Your password. <b>Don't give this to others.</b>
         </p>
         <p>Re-enter Password:<br>
-        <input type="password" name="password_check_field" placeholder="Re-enter Password">Re-enter your password. Make sure to spell the password correctly.
+        <input type="password" name="password_check" placeholder="Re-enter Password">Re-enter your password. Make sure to spell the password correctly.
         </p>
         <!-- Submit button -->
         <input type="submit">

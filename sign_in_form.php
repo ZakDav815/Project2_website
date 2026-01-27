@@ -6,7 +6,7 @@
     <title>Sign in</title>
 </head>
 <body>
-    <p1><b>You have been Signed Out.</b></p1>
+    <p1><b>You not logged in.</b></p1>
     <p>Sign in to enter.</p>
     <form action="sign_in_validate.php" method="post">
         <input type="text" name="username"
