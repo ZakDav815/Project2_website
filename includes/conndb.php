@@ -14,4 +14,5 @@ $conn = new mysqli(
     if($conn->connect_error) {
         die("connection failed: " . $conn->connect_error);
     }
-    echo "connect successfully";
+    // echo "<h1><b>worked successfully!</b></h1>"; commented so this is not visible
+    ?>

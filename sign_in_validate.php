@@ -27,7 +27,7 @@ $statement->close();
 
 if(isset($user_id) && !empty($user_id)) // changed from if(isset($user_id) && !empty($user_id))
 {
-    echo($user_id);
+    // echo($user_id);
     //check password in password table using password_verify()
 
     $statement = $conn->prepare("SELECT password_hash FROM passwords WHERE user_id = ?"); //not sure of password_hash/passwords/user_id works as phpMyAdmin not working(25/01/26 20:34)

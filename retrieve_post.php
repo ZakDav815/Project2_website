@@ -3,7 +3,7 @@
 include 'Includes/conndb.php';
 
 $post_id = $_GET['id'];
-echo $post_id;
+// echo $post_id;
 
 $SQL = "SELECT title, post_txt FROM post WHERE id = '$post_id'";
 

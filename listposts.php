@@ -7,8 +7,24 @@
 </head>
 <body>
     <nav>
-        <a href="Google.com">Google</a>
+        <p>
+            Navigate here, in the Navigation element???
+        </p>
     </nav>
+    <style>
+        .newposttext {
+            background-color: azure;
+        }
+        .newpostlink {
+            color: red;
+        }
+        nav {
+            
+        }
+    </style>
+    <section class="newposttext">
+        <p><b>Have something to say? click <a href="http://localhost/Project2_website/new_post_form.php" class="newpostlink">here</a> to make a new post!</b></p>
+    </section>
     <?php
 
     include 'includes/conndb.php';
